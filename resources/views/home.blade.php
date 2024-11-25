@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+@extends('layouts.main')
+@section('content')
     @foreach ($cards as $card)
-    <p>{{$card['id']}}</p>
+    <p class="test">{{$card['id']}}</p>
+    <img src="{{$card['path']}}" alt="{{$card['title']}}" width="100px">
 
     @endforeach
-</body>
-</html>
+@endsection

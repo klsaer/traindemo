@@ -2,13 +2,23 @@
 
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MainController::class, 'showIndex'])
     ->name('home');
 
-Route::get('/cards', [MainController::class, 'showCards'])
+Route::get('/', [MainController::class, 'showCards'])
     ->name('cards');
+
+Route::get('/reports',[ReportController::class, 'index'])
+    ->name('report.index');
+
+
+
+
+
+
 
 
 Route::get('/dashboard', function () {

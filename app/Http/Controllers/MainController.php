@@ -16,11 +16,11 @@ class MainController extends Controller
         $cards = [
             [
                 'id'=>1, 'title'=>"Продукт 1", 'price' => 500,
-                'path' =>"./public/img/1.jpg",
+                'path' =>"img/1.jpg",
             ],
             [
                 'id'=>2, 'title'=>"Продукт 2", 'price' => 600,
-                'path' =>"./public/img/1.jpg",
+                'path' =>"img/1.jpg",
             ]
             ];
             return view('home',compact('cards'));

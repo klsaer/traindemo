@@ -1,3 +1,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    text-decoration: none;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding-left: 15px;
+    height: 100px;
+    gap: 30px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding-left: 15px;
+    height: 100px;
+    gap: 30px;
+}
+.navigation_header{
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    margin-left: 15px;
+    height: fit-content;
+    min-height: 700px;
+
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    gap: 30px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+
+}
+.card_img{
+    width: 200px;
+}
+.reports{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.report{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: fit-content;
+    max-width: 300px;
+}
