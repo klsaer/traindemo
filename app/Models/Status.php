@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Status extends Model
 {
+    use HasFactory;
+    
     public function Reports():HasMany
     {
         return $this->hasMany(Report::class);
