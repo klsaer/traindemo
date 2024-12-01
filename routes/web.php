@@ -20,7 +20,11 @@ Route::delete('/reports/{report}', [ReportController::class, 'destroy'])
 Route::post('/reports',[ReportController::class,'store'])
     ->name('reports.store');
 
+Route::get('/reports/{report}', [ReportController::class,'show'])
+    ->name('reports.show');
 
+Route::put('/reports/{report}', [ReportController::class, 'update'])
+    ->name('reports.update');
 
 
 
