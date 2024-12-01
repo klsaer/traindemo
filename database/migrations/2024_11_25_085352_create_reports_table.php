@@ -13,9 +13,12 @@ return new class extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
-            $table->string("number");
-            $table->text("description");
+            $table->string("number")
+            ->nullable();
+            $table->text("description")
+            ->nullable();
             $table->timestamp("added_at");
+            $table->softDeletes();
             $table->timestamps();
         });
     }

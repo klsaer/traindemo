@@ -75,3 +75,17 @@ a{
     width: fit-content;
     max-width: 300px;
 }
+.report_add{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left:30px ;
+}
+input{
+    cursor: pointer;
+}

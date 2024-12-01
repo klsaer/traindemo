@@ -14,6 +14,11 @@ Route::get('/', [MainController::class, 'showCards'])
 Route::get('/reports',[ReportController::class, 'index'])
     ->name('report.index');
 
+Route::delete('/reports/{report}', [ReportController::class, 'destroy'])
+    ->name('reports.destroy');
+
+Route::post('/reports',[ReportController::class,'store'])
+    ->name('reports.store');
 
 
 
