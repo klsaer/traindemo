@@ -12,7 +12,7 @@
         <img src="img/1.jpg" width="100" height="100">
         <p>Нарушений.нет</p>
         <ul class="navigation_header">
-        <a href="#"><li>Главная</li></a>
+        <a href="/reports"><li>Главная</li></a>
         <a href="#"><li>Массивы</li></a>
         <a href="#"><li>Массивы</li></a>
         </ul>

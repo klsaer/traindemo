@@ -23,7 +23,7 @@ Route::post('/reports',[ReportController::class,'store'])
 Route::get('/reports/{report}', [ReportController::class,'show'])
     ->name('reports.show');
 
-Route::put('/reports/{report}', [ReportController::class, 'update'])
+Route::post('/reports/{report}', [ReportController::class, 'update'])
     ->name('reports.update');
 
 

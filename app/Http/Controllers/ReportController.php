@@ -33,6 +33,7 @@ class ReportController extends Controller
     }
 
     public function update(Request $request, Report $report){
+        $reports= Report::all();
         $data=$request->validate([
             'number' => 'string',
             'description' => 'string',
@@ -40,5 +41,6 @@ class ReportController extends Controller
 
         $report->update($data);
         return redirect()->back();
+
     }
 }
