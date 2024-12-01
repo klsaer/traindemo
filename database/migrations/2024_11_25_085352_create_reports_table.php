@@ -17,6 +17,16 @@ return new class extends Migration
             ->nullable();
             $table->text("description")
             ->nullable();
+            $table->foreignId('user_id')
+            ->nullable()
+            ->constrained()
+            ->cascadeOnUpdate()
+            ->nullOnDelete();
+            $table->foreignId('status_id')
+            ->nullable()
+            ->constrained()
+            ->cascadeOnUpdate()
+            ->nullOnDelete();
             $table->timestamp("added_at");
             $table->softDeletes();
             $table->timestamps();
