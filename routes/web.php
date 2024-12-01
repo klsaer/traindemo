@@ -15,8 +15,7 @@ Route::get('/', [MainController::class, 'showCards'])
 Route::get('/reports',[ReportController::class, 'index'])
     ->name('report.index');
 
-Route::get('/statuses',[StatusController::class, 'index'])
-    ->name('status.index');
+
 
 Route::delete('/reports/{report}', [ReportController::class, 'destroy'])
     ->name('reports.destroy');

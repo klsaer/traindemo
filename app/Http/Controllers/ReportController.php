@@ -35,11 +35,12 @@ class ReportController extends Controller
         return view ('report.show',compact('report'));
     }
 
-    public function update(Request $request, Report $report){
+    public function update(Request $request, Report $report, Status $statuses){
         $report= Report::all();
         $data=$request->validate([
             'number' => 'string',
             'description' => 'string',
+            'status_id' =>''
         ]);
 
         $report->update($data);
