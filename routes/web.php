@@ -6,7 +6,19 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\StatusController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [MainController::class, 'showIndex'])
+
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/', [MainController::class, 'showIndex'])
     ->name('home');
 
 Route::get('/', [MainController::class, 'showCards'])
@@ -28,16 +40,6 @@ Route::get('/reports/{report}', [ReportController::class,'show'])
 
 Route::post('/reports/{report}', [ReportController::class, 'update'])
     ->name('reports.update');
-
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 });
 
